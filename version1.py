@@ -22,7 +22,11 @@ class User:
         """
         Verifies parents' information in the database.
         """
-        pass
+        if (self.father_name == father_name and self.father_first_name == father_first_name and self.father_date_of_birth == father_date_of_birth) \
+           and (self.mother_name == mother_name and self.mother_first_name == mother_first_name and self.mother_date_of_birth == mother_date_of_birth):
+            return True
+        else:
+            return False
 
 
 
@@ -111,16 +115,6 @@ class Administrator:
         Other functionalities to be defined.
         """
         pass
-
-
-class Authentication:
-    @staticmethod
-    def authenticate_user(user):
-        """
-        Authenticates a user before manipulating the global family tree.
-        """
-        pass
-
 
 
 #____________________________________   INTERFACE ____________________________
